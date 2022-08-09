@@ -13,13 +13,15 @@
         }
     ?>
 
-    <?php //get_template_part('template-parts/homepage/mvv'); ?>
+    <?php get_template_part('template-parts/homepage/slim-banner'); ?>
 
-    <?php //get_template_part('template-parts/homepage/slim-banner'); ?>
+    <?php //get_template_part('template-parts/homepage/mvv'); ?>
 
     <?php //get_template_part('template-parts/homepage/specialties'); ?>
 
     <?php get_template_part('template-parts/homepage/services'); ?>
+
+    <?php get_template_part('template-parts/homepage/expertise-areas'); ?>
 
     <?php 
         $show_blog = get_field('show_blog');

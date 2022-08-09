@@ -1,10 +1,10 @@
 === WP Fastest Cache ===
 Contributors: emrevona
 Donate link: http://profiles.wordpress.org/emrevona/
-Tags: cache, caching, performance, wp-cache, total cache, super cache, cdn
+Tags: cache, Optimize, performance, wp-cache, core web vitals
 Requires at least: 3.3
 Tested up to: 6.0
-Stable tag: 1.0.3
+Stable tag: 1.0.4
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -71,6 +71,10 @@ The free version is enough to speed up your site but in the premium version ther
 11. Google Fonts Async
 12. Lazy Load - Defer offscreen images. Consider lazy-loading offscreen and hidden images after all critical resources have finished loading to lower time to interactive
 
+<h4>Information</h4>
+
+It is very inconvenient to use multiple caching plugins at the same time. That's why you need to disable plugins such as LiteSpeed Cache, WP-Optimize, W3 Total Cache, WP Super Cache, SiteGround Optimizer, Breeze while using WP Fastest Cache.
+
 <h4>Supported languages: </h4>
 
 * 中文 (by suifengtec)
@@ -124,6 +128,10 @@ The free version is enough to speed up your site but in the premium version ther
 18. Database Cleanup
 
 == Changelog ==
+
+= 1.0.4 =
+* to add avif extensions for cdn
+* to add WPFC_SERVE_ONLY_VIA_CACHE [<a target="_blank" href="https://www.wpfastestcache.com/tutorial/how-to-serve-cache-only-via-php/">Details</a>]
 
 = 1.0.3 =
 * Photon will no longer be supported [<a target="_blank" href="https://www.wpfastestcache.com/blog/photon-will-no-longer-be-supported/">Details</a>]

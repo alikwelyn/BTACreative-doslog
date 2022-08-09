@@ -680,6 +680,10 @@
 				$this->deleteCache();
 			}
 
+			if(defined("WPFC_SERVE_ONLY_VIA_CACHE") && WPFC_SERVE_ONLY_VIA_CACHE){
+				$htaccess = preg_replace("/#\s?BEGIN\s?WpFastestCache.*?#\s?END\s?WpFastestCache/s", "", $htaccess);
+			}
+
 			return $htaccess;
 		}
 

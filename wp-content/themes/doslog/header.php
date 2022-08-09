@@ -111,11 +111,7 @@
     <nav class="navbar fixed-top navbar-expand-lg">
       <div class="container">
         <a class="navbar-brand" href="<?php echo get_home_url(); ?>">
-          <?php 
-            $custom_logo_id = get_theme_mod( 'custom_logo' );
-            $image = wp_get_attachment_image_src( $custom_logo_id , 'full' );
-          ?>
-          <img src="<?php echo $image[0]; ?>" width="200" alt="<?php echo get_bloginfo( 'name' ) . ' - '. get_bloginfo( 'description' ); ?>">
+          <img src="<?php bloginfo('template_url'); ?>/assets/imgs/logo-black.png" width="200" alt="<?php echo get_bloginfo( 'name' ) . ' - '. get_bloginfo( 'description' ); ?>" id="test">
         </a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
           aria-expanded="false" aria-label="Toggle navigation">
@@ -176,11 +172,7 @@
     <nav class="navbar fixed-top navbar-expand-lg">
       <div class="container">
         <a class="navbar-brand" href="<?php echo get_home_url(); ?>">
-          <?php 
-            $custom_logo_id = get_theme_mod( 'custom_logo' );
-            $image = wp_get_attachment_image_src( $custom_logo_id , 'full' );
-          ?>
-          <img src="<?php echo $image[0]; ?>" width="200" alt="<?php echo get_bloginfo( 'name' ) . ' - '. get_bloginfo( 'description' ); ?>">
+          <img src="<?php bloginfo('template_url'); ?>/assets/imgs/logo-black.png" width="200" alt="<?php echo get_bloginfo( 'name' ) . ' - '. get_bloginfo( 'description' ); ?>" id="test">
         </a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
           aria-expanded="false" aria-label="Toggle navigation">

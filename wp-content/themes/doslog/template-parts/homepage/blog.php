@@ -2,7 +2,7 @@
       <div class="container">
         <div class="row">
           <div class="col-md-12" data-aos="fade-down" data-aos-once="false" data-aos-easing="ease-in-out" data-aos-offset="100" data-aos-delay="10" data-aos-duration="1000">
-            <h2>blog</h2>
+            <h2>Blog</h2>
           </div>
         </div>
 
@@ -17,8 +17,6 @@
                 $query->the_post();
                 get_template_part('template-parts/blog/list-blog-post'); 
               }
-              // Previous/next page navigation.
-              //twenty_twenty_one_the_posts_navigation();
             } else {
               get_template_part( 'template-parts/blog/list-blog-post-empty' );
             }
@@ -34,7 +32,7 @@
           <?php endif; ?>
           
           <div class="col-md-12 text-center">
-            <a href="blog" class="btn btn__rose">ver matérias anteriores</a>
+            <a href="blog" class="btn btn_red">ver matérias anteriores</a>
           </div>
         </div>
 

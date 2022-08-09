@@ -383,18 +383,6 @@ function wpbeginner_remove_version() {
 }
 add_filter( 'the_generator', 'wpbeginner_remove_version' );
 
-// Wordpress - Enable SVG upload
-function smartwp_enable_svg_upload( $mimes ) {
-  if ( !current_user_can( 'administrator' ) ) {
-    return $mimes;
-  }
-  $mimes['svg']  = 'image/svg+xml';
-  $mimes['svgz'] = 'image/svg+xml';
-  
-  return $mimes;
-}
-add_filter( 'upload_mimes', 'smartwp_enable_svg_upload' );
-
 // Wordpress - Remove comment URL field
 function remove_comment_fields($fields) {
   unset($fields['url']);

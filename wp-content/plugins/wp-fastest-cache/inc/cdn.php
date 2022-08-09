@@ -384,6 +384,10 @@
 							$res = array("success" => true);
 						}
 
+						if(($response_code == 400) && (preg_match("/speedsize\.com/i", $_GET["url"]))){
+							$res = array("success" => true);
+						}
+
 						if(($response_code == 401) && (preg_match("/res\.cloudinary\.com/i", $_GET["url"]))){
 							$res = array("success" => true);
 						}
