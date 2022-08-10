@@ -20,8 +20,8 @@
 
   <body>
 
-    <!--<div class="preloader">
-      <img class="preloader-logo" src="<?php bloginfo('template_url'); ?>/assets/imgs/logo.png" width="200" alt="<?php echo get_bloginfo( 'name' ) . ' - '. get_bloginfo( 'description' ); ?>">
+    <div class="preloader">
+      <img class="preloader-logo" src="<?php bloginfo('template_url'); ?>/assets/imgs/logo-black.png" width="200" alt="<?php echo get_bloginfo( 'name' ) . ' - '. get_bloginfo( 'description' ); ?>">
       <div class="preloader-preview-area">
           <div class="ball-pulse">
               <div></div>
@@ -29,7 +29,7 @@
               <div></div>
           </div>
       </div>
-    </div>-->
+    </div>
   <?php 
     $theme_options_code = 435;
     $show_wp = get_field('show_wp_button', $theme_options_code);
