@@ -223,7 +223,7 @@ ul#menu-menu-paginas li a{
 	width: 22px;
 	display: block;
 	height: 2px;
-	background-color: #FE9305;
+	background-color: #fff;
 	-webkit-transition: all 0.2s;
 	transition: all 0.2s;
 }
@@ -267,44 +267,47 @@ ul#menu-menu-paginas li a{
   right:0;
   z-index: 10000001;
 }
-.carousel-item .button  .btn_red:hover{
+.carousel-item .button .btn_red:hover{
   color: #fff;
   border-color: #fff;
 }
 
 #sobre {
   margin: 3em 0;
+  background-color: #fff;
 }
-#sobre .row div:nth-of-type(1){
-  background: url("../imgs/sobre.jpg") transparent no-repeat;
-  color:white;
-  justify-content: flex-end;
-  width: 959px;
-  height: 864px;
+#sobre .container-fluid{
+  padding: 0;
+  margin: 0;
 }
-#sobre .row div:nth-of-type(2){
-  background-color: transparent;
-  justify-content: flex-start;
-  padding-right: 250px;
-  padding-left: 0;
+#sobre .col-md-6{
+  padding-right: 0px;
+  padding-left: 0px;
 }
-#sobre h2{
+#sobre .col-md-6 img{
+  width: 100%;
+}
+#sobre .txt{
+  padding: 0 5em;
+}
+#sobre .txt h2{
   color: #FF0000;
   font-size: 55px;
   font-family: 'Poppins', sans-serif;
   font-weight: 800;
   text-transform: uppercase;
-  padding-bottom: 1em;
+  padding-bottom: .5em;
 }
-#sobre p{
+#sobre .txt p{
   color: #000;
   font-size: 18px;
   font-family: 'Poppins', sans-serif;
   font-weight: 400;
   text-align: justify;
   text-justify: inter-word;
+  width: 70%;
 }
-#sobre p strong{
+#sobre .txt p strong{
   color: #000;
 }
 
@@ -394,10 +397,10 @@ ul#menu-menu-paginas li a{
   transition: border-color 300ms;
 }
 #video .videoPoster:hover:before, .videoPoster:focus:before {
-	border-color: #ea4a6c;
+	border-color: #FF0000;
 }
 #video .videoPoster:hover:after, .videoPoster:focus:after {
-	border-left-color: #ea4a6c;
+	border-left-color: #FF0000;
 }
 #video .videoWrapperActive .videoPoster {
 	opacity: 0;
@@ -447,7 +450,7 @@ ul#menu-menu-paginas li a{
   background: url('../imgs/bg-linha.jpg') no-repeat;
 }
 #slim-banner .container{
-  padding: 40px 100px;
+  padding: 38px 100px;
   text-align: center;
 }
 #slim-banner h3{
@@ -456,9 +459,6 @@ ul#menu-menu-paginas li a{
   font-family: 'Poppins', sans-serif;
   font-weight: 800;
   line-height: 1.1;
-}
-#slim-banner a{
-  margin-top: 1em;
 }
 #slim-banner .btn_red{
   margin-top: 1em;
@@ -586,7 +586,6 @@ ul#menu-menu-paginas li a{
   font-weight: 400;
   line-height: 1;
   text-align: left;
-  /*display: list-item;*/
 }
 #atuacao .btn_red{
   margin-top: 1em;

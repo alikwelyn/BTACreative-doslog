@@ -31,7 +31,8 @@
       </div>
     </div>-->
   <?php 
-    $show_wp = get_field('show_wp_button');
+    $theme_options_code = 435;
+    $show_wp = get_field('show_wp_button', $theme_options_code);
     if($show_wp == true){ 
   ?>
     <div>
@@ -71,8 +72,8 @@
             ) );
           ?>
           <?php 
-          $social_media_menu = get_field('social_media_menu');
-          $social_media_choose_menu = get_field('social_media_choose_menu');
+          $social_media_menu = get_field('social_media_menu', $theme_options_code);
+          $social_media_choose_menu = get_field('social_media_choose_menu', $theme_options_code);
           if($social_media_menu == true){ 
           ?>
           <div class="social-part">
@@ -131,34 +132,34 @@
             ) );
           ?>
           <?php 
-          $obj_id = "97";
-          $social_media_menu = get_field('social_media_menu', $obj_id);
-          $social_media_choose_menu = get_field('social_media_choose_menu', $obj_id);
+          $theme_options_code = "97";
+          $social_media_menu = get_field('social_media_menu', $theme_options_code);
+          $social_media_choose_menu = get_field('social_media_choose_menu', $theme_options_code);
           if($social_media_menu == true){ 
           ?>
           <div class="social-part">
             <?php if($social_media_choose_menu && in_array('Facebook', $social_media_choose_menu)) { ?>
-            <a href="<?php the_field('link_facebook', $obj_id); ?>" target="_blank">
+            <a href="<?php the_field('link_facebook', $theme_options_code); ?>" target="_blank">
               <i class="fa fa-facebook" aria-hidden="true"></i>
             </a>
             <?php } ?>
             <?php if($social_media_choose_menu && in_array('Instagram', $social_media_choose_menu)) { ?>
-            <a href="<?php the_field('link_instagram', $obj_id); ?>" target="_blank">
+            <a href="<?php the_field('link_instagram', $theme_options_code); ?>" target="_blank">
               <i class="fa fa-instagram" aria-hidden="true"></i>
             </a>
             <?php } ?>
             <?php if($social_media_choose_menu && in_array('Youtube', $social_media_choose_menu)) { ?>
-              <a href="<?php the_field('link_youtube', $obj_id); ?>" target="_blank">
+              <a href="<?php the_field('link_youtube', $theme_options_code); ?>" target="_blank">
                 <i class="fa fa-youtube"></i>
               </a>
             <?php } ?>
             <?php if($social_media_choose_menu && in_array('Twitter', $social_media_choose_menu)) { ?>
-              <a href="<?php the_field('link_twitter', $obj_id); ?>" target="_blank">
+              <a href="<?php the_field('link_twitter', $theme_options_code); ?>" target="_blank">
                 <i class="fa fa-twitter"></i>
               </a>
             <?php } ?>
             <?php if($social_media_choose_menu && in_array('Linkedin', $social_media_choose_menu)) { ?>
-              <a href="<?php the_field('link_linkedin', $obj_id); ?>" target="_blank">
+              <a href="<?php the_field('link_linkedin', $theme_options_code); ?>" target="_blank">
                 <i class="fa fa-linkedin"></i>
               </a>
             <?php } ?>
@@ -192,34 +193,34 @@
             ) );
           ?>
           <?php 
-          $obj_id = "97";
-          $social_media_menu = get_field('social_media_menu', $obj_id);
-          $social_media_choose_menu = get_field('social_media_choose_menu', $obj_id);
+          $theme_options_code = "97";
+          $social_media_menu = get_field('social_media_menu', $theme_options_code);
+          $social_media_choose_menu = get_field('social_media_choose_menu', $theme_options_code);
           if($social_media_menu == true){ 
           ?>
           <div class="social-part">
             <?php if($social_media_choose_menu && in_array('Facebook', $social_media_choose_menu)) { ?>
-            <a href="<?php the_field('link_facebook', $obj_id); ?>" target="_blank">
+            <a href="<?php the_field('link_facebook', $theme_options_code); ?>" target="_blank">
               <i class="fa fa-facebook" aria-hidden="true"></i>
             </a>
             <?php } ?>
             <?php if($social_media_choose_menu && in_array('Instagram', $social_media_choose_menu)) { ?>
-            <a href="<?php the_field('link_instagram', $obj_id); ?>" target="_blank">
+            <a href="<?php the_field('link_instagram', $theme_options_code); ?>" target="_blank">
               <i class="fa fa-instagram" aria-hidden="true"></i>
             </a>
             <?php } ?>
             <?php if($social_media_choose_menu && in_array('Youtube', $social_media_choose_menu)) { ?>
-              <a href="<?php the_field('link_youtube', $obj_id); ?>" target="_blank">
+              <a href="<?php the_field('link_youtube', $theme_options_code); ?>" target="_blank">
                 <i class="fa fa-youtube"></i>
               </a>
             <?php } ?>
             <?php if($social_media_choose_menu && in_array('Twitter', $social_media_choose_menu)) { ?>
-              <a href="<?php the_field('link_twitter', $obj_id); ?>" target="_blank">
+              <a href="<?php the_field('link_twitter', $theme_options_code); ?>" target="_blank">
                 <i class="fa fa-twitter"></i>
               </a>
             <?php } ?>
             <?php if($social_media_choose_menu && in_array('Linkedin', $social_media_choose_menu)) { ?>
-              <a href="<?php the_field('link_linkedin', $obj_id); ?>" target="_blank">
+              <a href="<?php the_field('link_linkedin', $theme_options_code); ?>" target="_blank">
                 <i class="fa fa-linkedin"></i>
               </a>
             <?php } ?>

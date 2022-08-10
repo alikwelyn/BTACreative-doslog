@@ -26,7 +26,12 @@
           <?php endif; ?>
 
           <div class="col-md-12 text-center">
-            <a href="#contato" class="btn btn_red">FAÇA SEU ORÇAMENTO</a>
+            <?php $theme_options_code = 435; ?>
+            <?php if( have_rows('services_section', $theme_options_code) ): ?>
+            <?php while( have_rows('services_section', $theme_options_code) ): the_row();?>
+            <a href="<?php the_sub_field('services_section_link_button', $theme_options_code); ?>" class="btn btn_red"><?php the_sub_field('services_section_text_button', $theme_options_code); ?></a>
+            <?php endwhile; ?>
+            <?php endif; ?>
           </div>
         </div>
       </div>

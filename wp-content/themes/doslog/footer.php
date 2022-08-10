@@ -1,7 +1,6 @@
 <?php 
-
-$obj_id = "97";
-
+$theme_options_code = 435;
+$informations_footer = get_field('informations_footer', $theme_options_code);
 ?>
 <footer>
   <div class="container">
@@ -10,24 +9,24 @@ $obj_id = "97";
         <img src="<?php bloginfo('template_url'); ?>/assets/imgs/logo-black.png" width="200" alt="<?php echo get_bloginfo( 'name' ) . ' - '. get_bloginfo( 'description' ); ?>">
         <ul class="styled-icons icon-theme-colored list-inline">
         <?php
-        $social_media_footer = get_field('social_media_footer', $obj_id);
-        $social_media_choose_footer = get_field('social_media_choose_footer', $obj_id);
+        $social_media_footer = get_field('social_media_footer', $theme_options_code);
+        $social_media_choose_footer = get_field('social_media_choose_footer', $theme_options_code);
         if($social_media_footer == true){ 
         ?>
           <?php if($social_media_choose_footer && in_array('Facebook', $social_media_choose_footer)) { ?>
-            <li><a href="<?php the_field('link_facebook', $obj_id); ?>" target="_blank"><i class="fa fa-facebook"></i></a></li>
+            <li><a href="<?php the_field('link_facebook', $theme_options_code); ?>" target="_blank"><i class="fa fa-facebook"></i></a></li>
           <?php } ?>
           <?php if($social_media_choose_footer && in_array('Instagram', $social_media_choose_footer)) { ?>
-            <li><a href="<?php the_field('link_instagram', $obj_id); ?>" target="_blank"><i class="fa fa-instagram"></i></a></li>
+            <li><a href="<?php the_field('link_instagram', $theme_options_code); ?>" target="_blank"><i class="fa fa-instagram"></i></a></li>
           <?php } ?>
           <?php if($social_media_choose_footer && in_array('Youtube', $social_media_choose_footer)) { ?>
-            <li><a href="<?php the_field('link_youtube', $obj_id); ?>" target="_blank"><i class="fa fa-youtube"></i></a></li>
+            <li><a href="<?php the_field('link_youtube', $theme_options_code); ?>" target="_blank"><i class="fa fa-youtube"></i></a></li>
           <?php } ?>
           <?php if($social_media_choose_footer && in_array('Twitter', $social_media_choose_footer)) { ?>
-            <li><a href="<?php the_field('link_twitter', $obj_id); ?>" target="_blank"><i class="fa fa-twitter"></i></a></li>
+            <li><a href="<?php the_field('link_twitter', $theme_options_code); ?>" target="_blank"><i class="fa fa-twitter"></i></a></li>
           <?php } ?>
           <?php if($social_media_choose_footer && in_array('Linkedin', $social_media_choose_footer)) { ?>
-            <li><a href="<?php the_field('link_linkedin', $obj_id); ?>" target="_blank"><i class="fa fa-linkedin"></i></a></li>
+            <li><a href="<?php the_field('link_linkedin', $theme_options_code); ?>" target="_blank"><i class="fa fa-linkedin"></i></a></li>
           <?php } ?>
         <?php } ?>
         </ul>
@@ -42,10 +41,9 @@ $obj_id = "97";
           </div>
           <div class="col-md-12">
             <p class="end">
-              <?php the_field('endereco', $obj_id); ?><br>
-              <?php the_field('bairro_cidade', $obj_id); ?><br>
-              <?php the_field('cep', $obj_id); ?><br>
-              <?php the_field('horarios', $obj_id); ?>
+              <?php echo $informations_footer['street_informations_footer']; ?><br>
+              <?php echo $informations_footer['district_city_informations_footer']; ?><br>
+              CEP <?php echo $informations_footer['cep_informations_footer']; ?><br>
             </p>
           </div>
         </div>
@@ -74,8 +72,8 @@ $obj_id = "97";
 <script>
 AOS.init();
 function VerTelefone(){ 
-$("#VerTelefone").text('<?php $phone = get_field('phone_default', $obj_id);
-$whatsapp = get_field('whatsapp_default', $obj_id);
+$("#VerTelefone").text('<?php $phone = $informations_footer['whatsapp_informations_footer_copiar'];
+$whatsapp = $informations_footer['phone_informations_footer'];
 if($phone == ""){
   $whatsapp = "(".substr($whatsapp, 0, 2).") ".substr($whatsapp, 2, -4)."-".substr($whatsapp, -4);
   echo $whatsapp;
@@ -86,7 +84,7 @@ if($phone == ""){
 ?>'); 
 }
 function VerEmail(){ 
-$("#VerEmail").text('<?php the_field('email_default', $obj_id);?>'); 
+$("#VerEmail").text('<?php echo $informations_footer['email_informations_footer']; ?>'); 
 }
 
 $(window).scroll(function (event) {
